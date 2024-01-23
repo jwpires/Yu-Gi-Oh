@@ -4,80 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Estilos  -->
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/buttons.css">
-    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
-    <link rel="stylesheet" href="./src/styles/main.css">
-
-    <!-- Fontes -->
+    <title>Yu-Gi-Oh!</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <title>Yu-Gi-Oh | Jo-Ken-Po Edition</title>
-
+    <link rel="shortcut icon" href="src/assets/favicon/Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="bg-video">
+    <audio id="bgm" loop>
+        <source src="src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+    <div class="bg_video">
         <video class="video" autoplay loop muted>
-            <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+            <source src="src/assets/video/yugi.mp4" type="video/mp4">
         </video>
     </div>
-
-    <div class="container">
-        <div class="container__left framed-golden-2">
-
+    <main class="container">
+        <section class="container__left framed-golden-2">
             <div class="score_box frame">
                 <span id="score_points">Win: 0 | Lose: 0</span>
             </div>
             <div class="menu_avatar">
-                <img id="card-image">
+                <img id="card_image">
             </div>
             <div class="card_details frame">
-                <p id="card-name"></p>
-                <p id="card-type"></p>
+                <p id="card_name">Selecione</p>
+                <p id="card_type">uma Carta</p>
             </div>
+        </section>
 
-        </div>
+        <section class="container__rigth">
+            <div class="card__container">
+                <div class="card_box framed" id="computer_cards">
 
-        <div class="container__right">
-            <div class="card-box__container">
-
-                <div class="card-box framed" id="computer-cards">
-                
                 </div>
-    
-                <div class="card-versus__container">
-                    <div class="versus-top">
-                        <div class="card-infield">
-                            <img dir="player-field-card" id="player-cards" height="180px" width="125px" >
-                        </div>
-                        
-                        <img height="100px" src="./src/assets/icons/millenium2.png">
+                <div class="card__versus__container">
+                    <div class="versus_top">
 
-                        <div class="card-infield">
-                            <img dir="computer-field-card" id="player-cards" height="180px" width="125px" >
+                        <div class="card_infield">
+                            <img id="player_field_card" height="180px" width="125px">
                         </div>
 
+                        <img height="100px" src="./src/assets/icons/millenium2.png" alt="Olho do Milenio">
+
+                        <div class="card_infield">
+                            <img id="computer_field_card" height="180px" width="125px">
+                        </div>
                     </div>
-                    <div class="versus-bottom">
-                        <button id="next-duel" class="rpgui-button" onclick="resetDuel">GANHOU</button>
+                    <div class="versus_buttom">
+                        <button id="next_duel" class=" rpgui-button" onclick="resetDuel()"> Ganhou </button>
                     </div>
                 </div>
-    
-                <div class="card-box framed">
-                    
+                <div class="card_box framed" id="player_cards">
+
                 </div>
-                
             </div>
 
-        </div>
-    </div>
-
-    <script src="./src/scripts/engine.js" defer></script>
+        </section>
+    </main>
+    <script src="src/scripts/engine.js"></script>
 </body>
 
 </html>
