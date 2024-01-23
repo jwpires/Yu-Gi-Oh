@@ -16,7 +16,7 @@ Bem-vindo ao **Yu-Gi-Oh | Jo-ken-po Edition**! Neste repositório, você encontr
 
 1. Clone este repositório para sua máquina local.
 2. Abra o arquivo `index.html` em seu navegador web.
-3. Caso queira Simular de forma online, click no link 
+3. Caso queira Simular de forma online, click no link [https://jwpires.github.io/Yu-Gi-Oh/]
 
 
 ### Créditos
